@@ -4,11 +4,12 @@ APACHE_ZIP="https://www.apachelounge.com/download/VS16/binaries/httpd-2.4.41-win
 PHP_ZIP="https://windows.php.net/downloads/releases/php-7.3.11-Win32-VC15-x64.zip"
 
 # an up-to-date upx is preferable now that development has started again
-if [ ! -e "./upx" ]; then
-    echo "Please place an up-to-date upx binary in this directory"
-    echo "See https://github.com/upx/upx/releases/"
-    exit
-fi
+# disable upx as it seems to break PHP on Windows. Also, the files are small enough already.
+#if [ ! -e "./upx" ]; then
+#    echo "Please place an up-to-date upx binary in this directory"
+#    echo "See https://github.com/upx/upx/releases/"
+#    exit
+#fi
 
 # we use previously downloaded files, but we warn about it
 if [ -d "tmp" ]; then
@@ -91,8 +92,9 @@ cp tmp/php/libsodium.dll                    out/server/php/ # needed for ldap?
 cp tmp/php/libssl1-1_1-x64.dll              out/server/php/ # needed for ldap?
 
 # compress files
-./upx out/server/*.dll
-./upx out/server/*.exe
-./upx out/server/modules/*.so
-./upx out/server/php/ext/*.dll
+# disable as it seems to break PHP on Windows
+#./upx out/server/*.dll
+#./upx out/server/*.exe
+#./upx out/server/modules/*.so
+#./upx out/server/php/ext/*.dll
 
