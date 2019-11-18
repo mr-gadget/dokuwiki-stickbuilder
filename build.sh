@@ -89,7 +89,7 @@ cp tmp/php/ext/php_pdo_sqlite.dll           out/server/php/ext/
 cp tmp/php/libssh2.dll                      out/server/php/ # instead of the missing files?
 cp tmp/php/libsasl.dll                      out/server/php/ # needed for ldap?
 cp tmp/php/libsodium.dll                    out/server/php/ # needed for ldap?
-cp tmp/php/libssl1-1_1-x64.dll              out/server/php/ # needed for ldap?
+cp tmp/php/libssl-1_1-x64.dll              out/server/php/ # needed for ldap?
 
 # compress files
 # disable as it seems to break PHP on Windows
