@@ -75,15 +75,20 @@ cp tmp/apache/modules/mod_rewrite.so        out/server/modules/
 cp tmp/apache/modules/mod_setenvif.so       out/server/modules/
 
 cp tmp/php/license.txt                      out/server/php/php-license.txt
-cp tmp/php/libeay32.dll                     out/server/php/
-cp tmp/php/php5apache2_4.dll                out/server/php/
-cp tmp/php/php5ts.dll                       out/server/php/
-cp tmp/php/ssleay32.dll                     out/server/php/
+cp tmp/php/libeay32.dll                     out/server/php/ # missing!
+cp tmp/php/php7apache2_4.dll                out/server/php/
+cp tmp/php/php7ts.dll                       out/server/php/
+cp tmp/php/ssleay32.dll                     out/server/php/ # missing!
 cp tmp/php/ext/php_bz2.dll                  out/server/php/ext/
 cp tmp/php/ext/php_gd2.dll                  out/server/php/ext/
+cp tmp/php/ext/php_ldap.dll                 out/server/php/ext/ # support ldap auth
 cp tmp/php/ext/php_mbstring.dll             out/server/php/ext/
 cp tmp/php/ext/php_openssl.dll              out/server/php/ext/
 cp tmp/php/ext/php_pdo_sqlite.dll           out/server/php/ext/
+cp tmp/php/libssh2.dll                      out/server/php/ # instead of the missing files?
+cp tmp/php/libsasl.dll                      out/server/php/ # needed for ldap?
+cp tmp/php/libsodium.dll                    out/server/php/ # needed for ldap?
+cp tmp/php/libssl1-1_1-x64.dll              out/server/php/ # needed for ldap?
 
 # compress files
 ./upx out/server/*.dll
