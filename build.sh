@@ -1,7 +1,7 @@
 #!/bin/bash
 
-APACHE_ZIP="https://www.apachelounge.com/download/VC11/binaries/httpd-2.4.25-win32-VC11.zip"
-PHP_ZIP="http://windows.php.net/downloads/releases/php-5.6.30-Win32-VC11-x86.zip"
+APACHE_ZIP="https://www.apachelounge.com/download/VS16/binaries/httpd-2.4.41-win64-VS16.zip"
+PHP_ZIP="https://windows.php.net/downloads/releases/php-7.3.11-Win32-VC15-x64.zip"
 
 # an up-to-date upx is preferable now that development has started again
 if [ ! -e "./upx" ]; then
